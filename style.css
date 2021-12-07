@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap");
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+.body {
+  padding: 1rem;
+}
+
+.About {
+  background-color: #f0f1f9;
+  display: flex;
+  padding: 2rem 3rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px #80808082;
+}
+
+.ill {
+  display: none;
+}
+
+.photo {
+  height: 8rem;
+  width: 8rem;
+  margin: 1rem 4rem 1rem 4rem;
+  border-radius: 50%;
+}
+
+.teamh {
+  font-size: 2rem;
+  margin: 2rem 1rem;
+}
+
+.card {
+  box-shadow: 0 2px 4px #80808082;
+  border-radius: 4px;
+  margin: 1rem;
+  display: inline-block;
+  padding: 1rem 0;
+  transition-duration: 0.5s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+}
+.name {
+  text-align: center;
+  font-weight: 500;
+}
+
+.post {
+  text-align: center;
+}
+
+.glimp {
+  font-size: 2rem;
+  margin: 2rem 1rem;
+}
+
+.room,
+.day,
+.date {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.loch {
+  font-size: 2rem;
+  margin: 2rem 2rem;
+}
+
+.slider {
+  position: relative;
+  background: #000116;
+  height: 20rem;
+  max-width: 20rem;
+  max-height: 15rem;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px #80808082;
+}
+
+.slider .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: circle(0% at 0 50%);
+}
+
+.slider .slide.active {
+  clip-path: circle(150% at 0 50%);
+  transition: 2s;
+}
+
+.slider .slide img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider .slide .info {
+  position: absolute;
+  color: #222;
+  background: rgba(255, 255, 255, 0.3);
+  width: 75%;
+  margin-top: 50px;
+  margin-left: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
+}
+
+.slider .slide .info h2 {
+  font-size: 2em;
+  font-weight: 800;
+}
+
+.slider .slide .info p {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.navigation {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slider:hover .navigation {
+  opacity: 1;
+}
+
+.prev-btn,
+.next-btn {
+  z-index: 999;
+  font-size: 2em;
+  color: #222;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev-btn {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  position: relative;
+  bottom: 8rem;
+}
+
+.next-btn {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  position: relative;
+  bottom: 8rem;
+}
+
+.navigation-visibility {
+  position: relative;
+  bottom: 15rem;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-visibility .slide-icon {
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.5);
+  width: 20px;
+  height: 10px;
+  transform: translateY(-50px);
+  margin: 0 6px;
+  border-radius: 2px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+}
+
+.navigation-visibility .slide-icon.active {
+  background: #4285f4;
+}
+
+@media (max-width: 900px) {
+  .slider {
+    width: 100%;
+  }
+
+  .slider .slide .info {
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .slider .slide .info h2 {
+    font-size: 1.8em;
+    line-height: 40px;
+  }
+
+  .slider .slide .info p {
+    font-size: 0.9em;
+  }
+}
+
+.glimpses {
+  margin: 0.5rem;
+  padding: 1rem;
+  /* background-color: #f0f1f9; */
+}
+
+.logo {
+  width: 20rem;
+  margin: 2rem 0;
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.twoc {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 596px) {
+  .threec {
+    display: flex;
+    justify-content: center;
+  }
+  .twoc {
+    display: block;
+  }
+  .slider {
+    max-width: 30rem;
+    max-height: 25rem;
+  }
+  .navigation-visibility {
+    bottom: 10rem;
+  }
+  .prev-btn {
+    bottom: 5rem;
+  }
+  .next-btn {
+    bottom: 5rem;
+  }
+  .ques1 {
+    font-size: 1.5rem;
+  }
+  .para1,
+  .para2,
+  .para3 {
+    font-size: 1.2rem;
+  }
+  .body {
+    padding: 1.5rem;
+  }
+  .ill {
+    width: 90%;
+  }
+}
+@media (min-width: 856px) {
+  .threec {
+    display: flex;
+    justify-content: center;
+  }
+  .twoc {
+    display: block;
+  }
+  .slider {
+    max-width: 30rem;
+    max-height: 25rem;
+  }
+  .navigation-visibility {
+    bottom: 10rem;
+  }
+  .prev-btn {
+    bottom: 5rem;
+  }
+  .next-btn {
+    bottom: 5rem;
+  }
+  .card {
+    margin: 2rem 3rem;
+  }
+  .ques1 {
+    font-size: 2rem;
+  }
+  .para1,
+  .para2,
+  .para3 {
+    font-size: 1.5rem;
+  }
+  body {
+    margin: 2rem;
+  }
+  .ill {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1100px) {
+  .fourc {
+    display: flex;
+    justify-content: center;
+  }
+  .card {
+    margin: 20px 10px;
+  }
+  body {
+    margin: 4rem;
+  }
+  .ill {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1250px) {
+  .card {
+    margin: 2rem 2rem;
+  }
+  .ques1 {
+    font-size: 3rem;
+  }
+  .para1,
+  .para2,
+  .para3 {
+    font-size: 1.5rem;
+  }
+  .logo {
+    width: 30rem;
+  }
+  body {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+  .illus {
+    position: relative;
+    top: 8rem;
+    left: 2rem;
+  }
+  .ill {
+    display: block;
+    width: 90%;
+  }
+}
+
+.caraousel {
+  display: flex;
+  justify-content: center;
+  margin: 5rem 0;
+}
+
+.tim {
+  margin-bottom: 2rem;
+  margin-top: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 1rem;
+  box-shadow: 0 2px 4px #80808082;
+  border-radius: 4px;
+}
+
+.link {
+  text-decoration: none;
+  color: #4285f4;
+  font-weight: bold;
+}
